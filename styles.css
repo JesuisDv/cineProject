@@ -1,0 +1,287 @@
+:root{
+    --color-principal : #EC4035
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box; 
+}
+/*! body  */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+
+/*? main */
+main{
+    flex: 1;
+}
+
+/*! Header */
+header{
+    display: flex;
+    padding: 20px 300px 20px 300px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-principal);
+}
+
+header img{
+    width: 100px;
+}
+
+.navHeader{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-left:30px ;
+    font-weight: 500;
+}
+
+.navHeader a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+/* ! Hero */
+/* section 1 */
+.hero{
+    height: 35vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+}
+
+.slider{
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider .imagen1{
+    display: block;
+    width: 100vw;
+    position: relative;
+}
+
+.slider .imagen2{
+    display: block;
+    width: 100vw;
+}
+
+.slider button {
+    position: relative;
+    justify-content: space-around;
+}
+
+/* Section 3  */
+.CarteleraHome{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 60vh;
+}
+
+.btnCartelera{
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--color-principal);
+    color: white;
+    font-size: large;
+}
+
+.btnLogin{
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color:var(--color-principal);
+}
+
+.btnCartelera{
+    margin-top: 20px;
+}
+
+.btnCartelera a{
+    color: white;
+    text-decoration: none;
+}
+
+/* carteleras slider vista previa */
+.carteleraSlider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.previaSlider{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.previaSlider div{
+    display: flex;
+    border: 2px solid black;
+    height: 300px;
+    width: 200px;
+    border-radius:10px;
+    gap:10px;
+    margin-top: 20px;
+}
+
+/* Section 3, main, info site home */
+.infoHome{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+    font-size: large;
+}
+
+.titulo{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.info{
+    padding: 50px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    width: 300px;
+    height: 300px;
+    gap: 100px 20px ;
+    text-align: left;
+    width: 40%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    margin-left: 130px;
+}
+
+.textInfo{
+    width: 400px;
+
+}
+
+.info img{
+    width: 500px;
+    height: 500px;
+}
+
+/* Footer */
+.cinema-footer {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.footer-content nav {
+  margin-top: 1rem;
+}
+
+.footer-content nav a {
+  color: #fceec0;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-content nav a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ! CARTELES:HTML */
+
+main{
+    flex: 1;
+}
+
+.heroCartelera{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/cinemaImg2.png");
+    color: white;
+    padding: 20px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+main h1{
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 span{
+    color: var(--color-principal);
+}
+
+
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.galeria article{
+    display: flex;
+    border: 2px solid black;
+    height: 300px;
+    width: 200px;
+    border-radius:10px;
+    gap:10px;
+    margin-top: 20px;
+}
+
+
+
