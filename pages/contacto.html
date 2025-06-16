@@ -8,25 +8,44 @@
 </head>
 <body>
     <header>
-        <img src="../img/logo.png" alt="logo" class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt="logo" class="logo"></a>
         <div>
             <nav class="navHeader">
-                <a href="./index.html">HOME</a>
-                <a href="./pages/cartelera.html">CARTELERA</a>
-                <a href="./pages/contacto.html">CONTACTO</a>
+                <a href="../index.html"><strong>HOME</strong></a>
+                <a href="../pages/cartelera.html"><strong>CARTELERA</strong></a>
+                <a href="../pages/contacto.html"><strong>CONTACTO</strong></a>
             </nav>
         </div>
-        <button class="btnLogin">LOGIN</button>
+        <button class="btnLogin"><a href="./login.html">LOGIN</a></button>
     </header>
+
+    <main class="mainCartelera">
+        <div class="formularioDiv">
+            <form action="enviar" class="formulario">
+                <label for="name">Nombre</label>
+                <input required class="name" type="text" placeholder="Nombre Completo">
+                
+                <label for="mail">Email</label>
+                <input required class="mail" type="email" placeholder="Email">
+
+                <label for="subjet">Asunto</label>
+                <input type="text" placeholder="Asunto (Opcional)">
+
+                <label for="message">Mensaje</label>
+                <textarea required maxlength="500" placeholder="Cuentanos, sobre que quieres hablar" class="message" name="mensaje" id="message"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
     
-</body>
     <footer class="cinema-footer">
         <div class="footer-content">
             <h2>Cinéma POP</h2>
             <p>🎬 ¡Viviendo el cine con estilo retro y pasión pop!</p>
     
             <nav>
-                <a href="./index.html">Inicio</a>
+                <a href="../index.html">Inicio</a>
                 <a href="../pages/cartelera.html">Cartelera</a>
                 <a href="../pages/contacto.html">Contacto</a>
             </nav>
@@ -34,4 +53,6 @@
             <p class="copyright">&copy; 2025 Cinéma POP. Todos los derechos reservados.</p>
         </div>
     </footer>
+</body>
+
 </html>

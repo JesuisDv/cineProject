@@ -1,5 +1,7 @@
 :root{
-    --color-principal : #EC4035
+    --color-principal : #EC4035;
+    --principal-opacidad: #ec4135b1;
+    --color-secundario : #3f3f3f
 }
 
 *{
@@ -15,19 +17,25 @@ body {
     overflow-x: hidden;
 }
 
-
 html {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
   font-variation-settings:"wdth" 100;
 }
 
-
 /*? main */
 main{
     flex: 1;
+}
+
+main h1{
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 span{
+    color: var(--color-principal);
 }
 
 /*! Header */
@@ -50,30 +58,76 @@ header img{
     align-items: center;
     justify-content: center;
     padding-left:30px ;
-    font-weight: 500;
 }
 
 .navHeader a {
     text-decoration: none;
     color: white;
-    
 }
 
+.btnLogin{
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color:var(--color-principal);
+}
+
+.btnLogin a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-principal);
+}
 
 
 /* ! Hero */
 /* section 1 */
 .hero {
     width: 100%;
+    max-width: 2800px;
     height: auto;
-    overflow: hidden;
 }
 
-.slider{
-    display: flex;
+.sliderHero{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliderHero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn-slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.btn-slider.left {
+  left: 10px;
+}
+
+.btn-slider.right {
+  right: 10px;
+}
+
+.btn-slider:hover {
+  background-color: #6a0000cf;
 }
 
 .slider .imagen1{
@@ -82,17 +136,13 @@ header img{
     position: relative;
 }
 
-.slider .imagen2{
-    display: block;
-    width: 100vw;
+.slider .imagen1 {
+    width: 100%;
+    height: auto;
 }
 
-.slider button {
-    position: relative;
-    justify-content: space-around;
-}
 
-/* Section 3  */
+/*! Section 3  */
 .CarteleraHome{
     display: flex;
     flex-direction: column;
@@ -107,15 +157,6 @@ header img{
     background-color: var(--color-principal);
     color: white;
     font-size: large;
-}
-
-.btnLogin{
-    height: 40px;
-    width: 120px;
-    border-radius: 30px;
-    border: none;
-    background-color: white;
-    color:var(--color-principal);
 }
 
 .btnCartelera{
@@ -135,23 +176,64 @@ header img{
     gap: 20px;
 }
 
-.previaSlider{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+/* Contenedor horizontal */
+.previaSlider {
+  width: 100%;
+  max-width: calc(200px * 5 + 4rem); /* Espacio justo para 5 tarjetas + gaps */
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem;
+
+  /* Ocultar scrollbar en todos los navegadores */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
-.previaSlider div{
-    display: flex;
-    border: 2px solid #000000;
-    height: 300px;
-    width: 200px;
-    border-radius:10px;
-    gap:10px;
-    margin-top: 20px;
+.previaSlider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
-/* Section 3, main, info site home */
+.sliderCartelera {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  width: 200px;
+  flex: 0 0 auto;
+  background-color: var(--color-secundario, #222);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.slide .info {
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+
+
+/*! Section 3, main, info site home */
 .infoHome {
     padding: 40px 20px;
     text-align: center;
@@ -192,15 +274,14 @@ header img{
     margin-bottom: 1.2rem;
 }
 
-
 .info img{
     width: 400px;
     height: 400px;
 }
 
-/* Footer */
+/*! Footer */
 .cinema-footer {
-  background-color: var(--color-principal);
+  background-color: var(--color-secundario);
   color: #ffffff;
   padding: 2rem 0;
   text-align: center;
@@ -237,12 +318,7 @@ header img{
   opacity: 0.8;
 }
 
-
-/* ! CARTELES:HTML */
-
-main{
-    flex: 1;
-}
+/*! CARTELES:HTML */
 
 .heroCartelera{
     display: flex;
@@ -258,24 +334,12 @@ main{
     background-position: 50% 30%;
 }
 
-main h1{
-    text-align: center;
-    padding: 20px;
-}
-
-main h1 span{
-    color: var(--color-principal);
-}
-
-
-
-
+/*? peliculas */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 3rem;
-  padding: 15rem;
-
+  padding: 5rem 20rem;
 }
 
 /* Cada tarjeta de película */
@@ -312,5 +376,58 @@ main h1 span{
   color: #ffcc00;
 }
 
-/* Contacto */
+/*! Contacto */
+
+.mainCartelera{
+  display: flex;
+  align-items: center;
+}
+
+.formularioDiv{
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.formulario label{
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+.formulario input{
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: .5px solid var(--color-secundario);
+}
+
+.formulario textarea{
+  width: 400px;
+  height: 120px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.formulario button{
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--color-principal);
+    color:white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 
