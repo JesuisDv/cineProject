@@ -61,3 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error('Error al cargar películas:', err));
 });
 
+// ! Menu Hamburguesa
+
+const menuDesplegable = document.querySelector(".menu");
+const headerNav = document.querySelector(".navHeader");
+const botonLogin = document.querySelector(".btnLogin")
+
+menuDesplegable.addEventListener("click", ()=>{
+  headerNav.classList.toggle("active");
+  botonLogin.classList.toggle("active")
+});

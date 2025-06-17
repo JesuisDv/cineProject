@@ -65,6 +65,10 @@ header img{
     color: white;
 }
 
+.enlaceLogin{
+  display: none;
+}
+
 .btnLogin{
     height: 40px;
     width: 120px;
@@ -507,6 +511,19 @@ header img{
 }
 
 .navHeader.active {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+}
+
+.enlaceLogin{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.enlaceLogin{
   display: flex;
 }
 
