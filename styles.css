@@ -191,19 +191,19 @@ header img{
 /* Contenedor horizontal */
 .previaSlider {
   width: 100%;
-  max-width: calc(200px * 5 + 4rem); /* Espacio justo para 5 tarjetas + gaps */
+  max-width: calc(200px * 5 + 4rem);
   margin: 0 auto;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 1rem;
 
   /* Ocultar scrollbar en todos los navegadores */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
 .previaSlider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none; 
 }
 
 .sliderCartelera {
@@ -550,14 +550,8 @@ header img{
 
 /*! info home */
 .infoHome {
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 1.1rem;
-}
+    padding: 0px 0px;
 
-.titulo{
-    margin-top: 30px;
-    text-align: center;
 }
 
 .info {
@@ -578,20 +572,16 @@ header img{
 }
 
 .textInfo{
-    width: 400px;
-    margin: auto;
-    padding: 20px;
-    text-align: left;
-}
-
-.textInfo p{
-    line-height: 1.2;
-    margin-bottom: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
 }
 
 .info img{
-    width: 400px;
-    height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
 }
 
 /*! Footer */
