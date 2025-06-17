@@ -19,10 +19,30 @@
             </nav>
         </div>
         <button class="btnLogin"><a href="./login.html">LOGIN</a></button>
+        
+        <button id="btnMenu">
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
     </header>
 
-    <main>
+    <main class="mainLogin">
+        <div class="login">
+            <form action="login" class="formularioLogin">
+                <label for="userLogin">Usuario o Correo</label>
+                <input type="email" id="userLogin" placeholder="Usuario">
 
+                <label for="userPassword">Contraseña</label>
+                <input type="password" placeholder="contraseña">
+
+                <a href="#">¿Olvidaste tu contraseña?</a>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </main>
 
     <footer class="cinema-footer">
