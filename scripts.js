@@ -8,7 +8,7 @@ async function cargarPeliculas() {
     const data = await res.json();
     mostrarPeliculas(data.results)
   } catch (error){
-    console.error("Error al cargar peliculas: ", error)
+    console.error("Error al cargar peliculas: ", aerror)
   }
 }
 
@@ -69,3 +69,39 @@ const headerNav = document.querySelector(".navHeader");
 menuDesplegable.addEventListener("click", ()=>{
   headerNav.classList.toggle("active");
 });
+
+
+//Funcion buscar
+async function buscarPeliculas(query) {
+  const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&language=es-ES`;
+  const contenedor = document.getElementById("peliculas");
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (data.results.length === 0) {
+      contenedor.innerHTML = "<p>No se encontraron resultados.</p>";
+      return;
+    }
+
+    mostrarPeliculas(data.results);
+  } catch (error) {
+    console.error("Error en búsqueda:", error);
+    contenedor.innerHTML = "<p>Error al buscar películas.</p>";
+  }
+}
+
+
+// Escuchar input de búsqueda
+const inputBusqueda = document.getElementById("buscarInput");
+if (inputBusqueda) {
+  inputBusqueda.addEventListener("input", () => {
+    const texto = inputBusqueda.value.trim();
+    if (texto.length >= 2) {
+      buscarPeliculas(texto);
+    } else {
+      cargarPeliculas();
+    }
+  });
+}

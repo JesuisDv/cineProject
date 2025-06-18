@@ -392,6 +392,40 @@ header img{
   color: #ffcc00;
 }
 
+/* Buscar Peliculas */
+.buscar{
+  display: flex;
+  margin: 0rem 20rem;
+  padding: 5px;
+  align-items: center;
+}
+
+.buscar label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-principal);
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: small;
+}
+
+.buscar input{
+  width: 200px;
+  height: 30px;
+  border: 1px solid var(--color-secundario);
+  border-left-color: transparent;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-left: 5px;
+}
+
+
 /*! Contacto */
 
 .mainCartelera{
@@ -466,7 +500,7 @@ header img{
 .formularioLogin label {
   font-size: larger;
   font-weight: 600;
-  color: var(--color-principal);
+  color: var(--color-secundario);
 }
 
 .formularioLogin input{
@@ -482,6 +516,10 @@ header img{
   font-size: smaller;
 }
 
+.login h2{
+  color: var(--color-principal);
+}
+
 .formularioLogin button{
     height: 40px;
     width: 120px;
@@ -494,6 +532,8 @@ header img{
 }
 
 
+
+/* Media querys para responsive */
 @media (max-width: 768px) {
   /*! Header */
 
@@ -596,4 +636,9 @@ header img{
   padding: 3rem 10rem;
 }
 
+/* Buscar Peliculas */
+.buscar{
+  justify-content: center;
+  margin: 0rem 0rem;
+}
 }
