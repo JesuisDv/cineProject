@@ -542,8 +542,6 @@ header img{
   align-items: center;
 }
 
-/*! Section 3  */
-/* carteleras slider vista previa */
 .carteleraSlider {
     display: flex;
     flex-direction: column;
@@ -574,7 +572,7 @@ header img{
 .info {
   display: grid;
   grid-template-columns: 1fr; 
-  padding: 0px 0px;
+  padding:90px 0px;
 }
 
 .textInfo{
@@ -590,8 +588,12 @@ header img{
   height: 400px;
 }
 
-/*! Footer */
+/* ! Cartelera HTML */
 
-
+.galeria {
+  display: grid;
+  justify-content: center;
+  padding: 3rem 10rem;
+}
 
 }

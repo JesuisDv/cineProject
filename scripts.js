@@ -35,12 +35,13 @@ if (window.location.pathname.includes('cartelera.html')) {
 // Slider Home !
 
 document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.getElementById('sliderCartelera');
+    const slider = document.getElementById('sliderCartelera');
+  
+    document.querySelector('.previaSlider').addEventListener('wheel', function (e) {
+      e.preventDefault();
+      this.scrollLeft += e.deltaY;
+    })
 
-  document.querySelector('.previaSlider').addEventListener('wheel', function (e) {
-    e.preventDefault();
-    this.scrollLeft += e.deltaY;
-  });
 
   fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}&language=es-ES`)
     .then(res => res.json())
@@ -62,12 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ! Menu Hamburguesa
-
 const menuDesplegable = document.querySelector(".menu");
 const headerNav = document.querySelector(".navHeader");
-const botonLogin = document.querySelector(".btnLogin")
 
 menuDesplegable.addEventListener("click", ()=>{
   headerNav.classList.toggle("active");
-  botonLogin.classList.toggle("active")
 });
